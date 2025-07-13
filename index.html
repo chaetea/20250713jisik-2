@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>급식정보 조회</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 급식정보 조회</h1>
+            <p>원하는 날짜의 급식정보를 확인해보세요!</p>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <div class="date-input-group">
+                    <label for="mealDate">날짜 선택:</label>
+                    <input type="date" id="mealDate" name="mealDate">
+                </div>
+                <button id="searchBtn" class="search-btn">급식정보 조회</button>
+            </div>
+            
+            <div class="result-section">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>급식정보를 불러오는 중...</p>
+                </div>
+                
+                <div id="error" class="error hidden">
+                    <p id="errorMessage"></p>
+                </div>
+                
+                <div id="mealInfo" class="meal-info hidden">
+                    <h2 id="mealDateTitle"></h2>
+                    <div class="meal-content">
+                        <div class="meal-type">
+                            <h3>🍳 조식</h3>
+                            <div id="breakfast" class="meal-detail"></div>
+                        </div>
+                        <div class="meal-type">
+                            <h3>🍽️ 중식</h3>
+                            <div id="lunch" class="meal-detail"></div>
+                        </div>
+                        <div class="meal-type">
+                            <h3>🍴 석식</h3>
+                            <div id="dinner" class="meal-detail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 급식정보 조회 서비스</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
